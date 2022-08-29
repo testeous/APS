@@ -23,11 +23,10 @@ jobs:
           pwd 
           git branch
           git fetch
-          git branch
-          #for i in ${arr[@]}; do
-          # echo "$i"
-          #git checkout ИБ  
-          #done
+          for i in ${arr[@]}; do
+           echo "$i"
+          git checkout ИБ  
+          done
           
           echo ---------
           #git diff  ИВТ:Лекции/Лекция 01.\ Вводная.md/  Учительская:lect-pm/le1-intro.md > tmp
