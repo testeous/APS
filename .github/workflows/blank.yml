@@ -20,6 +20,7 @@ jobs:
         run: |
           pwd
           ls -la 
+          git checkout Учительская
           echo ---------
-          git diff Учительская:lect-pm/le1-intro.md  ПМ:Лекции/Лекция 01. Вводная.md
+          git diff  ПМ:Лекции/Лекция 01. Вводная.md  lect-pm/le1-intro.md
 
