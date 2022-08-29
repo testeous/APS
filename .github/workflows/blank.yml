@@ -15,11 +15,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install tree
         run: |
-          sudo apt-get install -y tree           
+         # sudo apt-get install -y tree           
       - name: Tree
         run: |
           pwd
           ls -la 
           echo ---------
-          git diff Учительская ПМ 'Лекция 01.\ Вводная.md/' le1-intro.md
+          git diff Учительская ПМ -- 'Лекция 01.\ Вводная.md/' le1-intro.md
 
