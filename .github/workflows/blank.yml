@@ -21,7 +21,7 @@ jobs:
           arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская")
           for i in ${arr[@]}; do
             echo "$i"
-            git checkout $i
+            git checkout ИБ
             
           done
           
