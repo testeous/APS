@@ -18,11 +18,11 @@ jobs:
          # sudo apt-get install -y tree           
       - name: Array
         run: |
-          arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская" "master")
+          arr=("ПИН" "Учительская")
           git fetch > 2
           for i in ${arr[@]}; do
             git checkout $i > 2
-            git diff $i:README.md Учительская:README.md > tmp
+            git diff $i:labs/labs-pin.md Учительская:labs/labs-pin.md > tmp
             if [ "$(wc -c tmp | awk '{print $1}')" -gt 0 ]
             then
               echo "$i not equal Учительская"
@@ -30,4 +30,3 @@ jobs:
               echo "$i good"
             fi
           done
-
