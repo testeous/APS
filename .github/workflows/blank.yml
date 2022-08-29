@@ -21,4 +21,5 @@ jobs:
           pwd
           ls -la 
           echo ---------
-          tree
+          git diff Учительская ПМ 'Лекция 01.\ Вводная.md/' le1-intro.md
+
