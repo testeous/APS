@@ -19,4 +19,6 @@ jobs:
       - name: Tree
         run: |
           pwd
-          tree --filelimit 10
+          ls -la 
+          echo ---------
+          tree --filelimit
