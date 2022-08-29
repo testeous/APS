@@ -19,8 +19,10 @@ jobs:
       - name: Array
         run: |
           arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская")
-          for i in $arr; do
+          for i in ${arr[@]}; do
+            echo "$i"
             git checkout $i
+            
           done
           
           echo ---------
