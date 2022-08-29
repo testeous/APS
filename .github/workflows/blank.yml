@@ -16,11 +16,16 @@ jobs:
       - name: Install tree
         run: |
          # sudo apt-get install -y tree           
-      - name: Tree
+      - name: Array
         run: |
-          pwd
-          ls -la 
-          git checkout Учительская
+          arr = (ИБ ИВТ ИКТ КТ ПИН ПМ РТ Учительская)
+          for i in arr
+          do
+            git checkout i
+          done
+          
           echo ---------
-          git diff  ПМ:Лекции/Лекция 01. Вводная.md  lect-pm/le1-intro.md
+          #git diff  ИВТ:Лекции/Лекция 01.\ Вводная.md/  Учительская:lect-pm/le1-intro.md > tmp
+          #wc -c tmp | awk '{print $1}'
+          
 
