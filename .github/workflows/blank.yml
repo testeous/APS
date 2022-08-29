@@ -21,4 +21,4 @@ jobs:
           pwd
           ls -la 
           echo ---------
-          tree --filelimit
+          tree
