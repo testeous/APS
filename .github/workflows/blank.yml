@@ -19,7 +19,7 @@ jobs:
       - name: Array
         run: |
           arr = (ИБ ИВТ ИКТ КТ ПИН ПМ РТ Учительская)
-          for i in arr
+          for i in arr;
           do
             git checkout i
           done
