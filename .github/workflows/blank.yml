@@ -22,7 +22,7 @@ jobs:
           git fetch
           for i in ${arr[@]}; do
            echo "$i"
-          git checkout ИБ  
+          git checkout $i  
           done
           echo ---------
           git diff ПИН:labs/labs-pin.md master:README.md > tmp
