@@ -19,7 +19,7 @@ jobs:
       - name: Array
         run: |
           arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская" "master")
-          git fetch
+          git fetch > 2
           for i in ${arr[@]}; do
             git checkout $i > 2
             git diff $i:README.md Учительская:README.md > tmp
@@ -30,6 +30,4 @@ jobs:
               echo "$i good"
             fi
           done
-          echo ---------
-          
 
