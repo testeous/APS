@@ -18,10 +18,9 @@ jobs:
          # sudo apt-get install -y tree           
       - name: Array
         run: |
-          arr = (ИБ ИВТ ИКТ КТ ПИН ПМ РТ Учительская)
-          for i in arr;
-          do
-            git checkout i
+          arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская")
+          for i in arr; do
+            git checkout $i
           done
           
           echo ---------
