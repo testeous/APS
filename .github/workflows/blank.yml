@@ -20,11 +20,10 @@ jobs:
         run: |
           arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская")
           git fetch
-          #for i in ${arr[@]}; do
-          # echo "$i"
-          #git checkout ИБ  
-          #done
-          git branch
+          for i in ${arr[@]}; do
+           echo "$i"
+          git checkout ИБ  
+          done
           echo ---------
           git diff ПИН:labs/labs-pin.md master:README.md > tmp
           wc -c tmp | awk '{print $1}'
