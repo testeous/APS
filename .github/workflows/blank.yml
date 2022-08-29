@@ -22,7 +22,7 @@ jobs:
           git fetch
           for i in ${arr[@]}; do
             git checkout $i > 2
-            git diff ПИН:labs/labs-pin.md Учительская:README.md > tmp
+            git diff $i:labs/labs-pin.md Учительская:README.md > tmp
             if [ "$(wc -c tmp | awk '{print $1}')" -gt 0 ]
             then
               echo "$i not equal Учительская"
