@@ -21,6 +21,7 @@ jobs:
           arr=("ИБ" "ИВТ" "ИКТ" "КТ" "ПИН" "ПМ" "РТ" "Учительская")
           ls -la 
           pwd 
+          git fetch
           for i in ${arr[@]}; do
             echo "$i"
             git checkout ИБ
