@@ -32,4 +32,6 @@ jobs:
             fi  
           done
           pwd
-          git diff ${{ github.event.before }}..${{ github.event.after }}
+          echo ${{ github.event.before }} | cut -c1-7
+          echo "-----------"
+          git log --pretty=format:"%h" | cut -c1-7
