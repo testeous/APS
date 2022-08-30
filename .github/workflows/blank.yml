@@ -35,3 +35,6 @@ jobs:
           echo ${{ github.event.before }} | cut -c1-7
           echo "-----------"
           git log --pretty=format:"%h" | cut -c1-7
+          echo '-----------------'
+          git log -5 --oneline
+          
