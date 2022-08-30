@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Install tree
         run: |
          #sudo apt-get install -y tree           
@@ -36,5 +38,5 @@ jobs:
           echo "-----------"
           git log --pretty=format:"%h" | cut -c1-7
           echo '-----------------'
-          git log -5 --oneline
+          git log -5
           
