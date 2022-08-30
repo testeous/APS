@@ -32,5 +32,4 @@ jobs:
             fi  
           done
           pwd
-          cd ../.. 
-          tree
+          cat $GITHUB_SHA
