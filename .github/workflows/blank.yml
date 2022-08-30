@@ -32,4 +32,4 @@ jobs:
             fi  
           done
           pwd
-          cat ${{ github.sha }}
+          git diff ${{ github.event.before }}..${{ github.event.after }}
