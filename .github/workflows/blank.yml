@@ -37,13 +37,16 @@ jobs:
           for branch in "${branch_arr[@]}"; do
             echo "point3.5"
             git checkout $branch > 2
+            git checkout Учительская > 2
             echo "point4"
             for sha in "${sha_arr[@]}"; do
+              echo "/////Current SHA: $sha/////"
               file_arr=$(git diff --name-only $sha)
               echo "point5"
               echo -e "List of changed files: $(git diff --name-only $sha) \n---------\n\n"
               
               for file in "${file_arr[@]}"; do
+                echo "/////Current file: $file/////"
                 echo "point6"
                 if [ -e $file ]
                 then
