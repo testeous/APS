@@ -25,7 +25,11 @@ jobs:
           echo "point1"
           curr_sha=${{ github.event.before }}
           git log --pretty=format:"%h" | cut -c1-7 | sed '/'"$curr_sha"'/,$d' > tmp
-          sha_arr=$(cat tmp) && cat tmp
+          echo -e "current sha result: $curr_sha \n ------------\n"
+          echo "tmp result: "
+          echo -e "end of tmp result \n\n"
+          
+          sha_arr=$(cat tmp)
           echo "point2"
           git fetch > 2
           echo "point3"
