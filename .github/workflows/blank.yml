@@ -20,18 +20,28 @@ jobs:
          #sudo apt-get install -y tree           
       - name: Array
         run: |
-          arr=("ПИН" "Учительская")
+          branch_arr=("ПИН", "ИВТ", "КТ", "ИКТ", "ПМ", "РТ")
+          #branch_arr=("ПИН")
+          
+          curr_sha=echo ${{ github.event.before }}
+          git log --pretty=format:"%h" | cut -c1-7 | sed '/'"$curr_sha"'/,$d' > tmp
+          sha_arr=$(cat tmp)
+          
           git fetch > 2
-          for i in ${arr[@]}; do
-            git checkout $i > 2
-            git diff $i:labs/labs-pin.md Учительская:labs/labs-pin.md > tmp
-            if [ "$(wc -c tmp | awk '{print $1}')" -gt 0 ]
-            then
-              echo "$i not equal Учительская"
-              echo "do cherry pick"
-            else 
-              echo "$i good"
-            fi  
+          
+          for branch in "${branch_arr[@]}"; do
+            git checkout $branch > 2
+            for sha in "${sha_arr[@]}"; do
+              file_arr=(git diff --name-only $sha)
+              for file in "${file arr[@]}"; do
+                if [ -e $file ]
+                then
+                  echo "File $file in $branch branch will be update"
+                else
+                  echo "File $file not found in $branch branch"
+                fi
+              done
+            done
           done
           pwd
           echo ${{ github.event.before }} | cut -c1-7 > tmp
