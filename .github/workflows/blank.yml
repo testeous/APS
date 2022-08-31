@@ -20,7 +20,7 @@ jobs:
          #sudo apt-get install -y tree           
       - name: Array
         run: |
-          branch_arr=("ПИН", "ИВТ", "КТ", "ИКТ", "ПМ", "РТ")
+          branch_arr=("ПИН" "ИВТ" "КТ" "ИКТ" "ПМ" "РТ")
           #branch_arr=("ПИН")
           echo "point1"
           curr_sha=${{ github.event.before }}
@@ -31,8 +31,8 @@ jobs:
           echo "point3"
           for branch in "${branch_arr[@]}"; do
             echo "point3.5"
-            git branch
-            git checkout $branch
+            git branch -a
+            git checkout $branch > 2
             echo "point4"
             for sha in "${sha_arr[@]}"; do
               file_arr=(git diff --name-only $sha)
