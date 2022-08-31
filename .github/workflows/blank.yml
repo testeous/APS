@@ -30,22 +30,21 @@ jobs:
           cat tmp
           echo -e "end of tmp result \n\n"
           
+          git checkout Учительская > 2
           sha_arr=$(cat tmp | tac)
           echo "point2"
           git fetch > 2
           echo "point3"
           for branch in "${branch_arr[@]}"; do
             echo "point3.5"
-            git checkout $branch > 2
-            git checkout Учительская > 2
             echo "point4"
             for sha in "${sha_arr[@]}"; do
               echo "/////Current SHA: $sha/////"
-              git checkout $sha
+              git checkout $sha 
               file_arr=$(git diff --name-only $sha)
               echo "point5"
               echo -e "List of changed files: $(git diff --name-only $sha) \n---------\n\n"
-              
+              git checkout $branch > 2
               for file in "${file_arr[@]}"; do
                 echo "/////Current file: $file/////"
                 echo "point6"
