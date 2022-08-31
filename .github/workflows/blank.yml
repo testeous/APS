@@ -39,7 +39,7 @@ jobs:
             git checkout $branch > 2
             echo "point4"
             for sha in "${sha_arr[@]}"; do
-              file_arr=(git diff --name-only $sha)
+              file_arr=$(git diff --name-only $sha)
               echo "point5"
               for file in "${file_arr[@]}"; do
                 echo "point6"
@@ -51,12 +51,13 @@ jobs:
                 fi
               done
             done
+            echo -e "End of $branch branch \n------------\n\n"
           done
           pwd
-          echo ${{ github.event.before }} | cut -c1-7 > tmp
-          git diff --name-only $(cat tmp)
-          echo "-----------"
-          git log --pretty=format:"%h" | cut -c1-7
-          echo '-----------------'
-          git log -5
+          #echo ${{ github.event.before }} | cut -c1-7 > tmp
+          #git diff --name-only $(cat tmp)
+          #echo "-----------"
+          #git log --pretty=format:"%h" | cut -c1-7
+          #echo '-----------------'
+          #git log -5
           
