@@ -30,7 +30,7 @@ jobs:
           cat tmp
           echo -e "end of tmp result \n\n"
           
-          sha_arr=$(cat tmp)
+          sha_arr=$(cat tmp | tac)
           echo "point2"
           git fetch > 2
           echo "point3"
@@ -41,6 +41,7 @@ jobs:
             echo "point4"
             for sha in "${sha_arr[@]}"; do
               echo "/////Current SHA: $sha/////"
+              git checkout $sha
               file_arr=$(git diff --name-only $sha)
               echo "point5"
               echo -e "List of changed files: $(git diff --name-only $sha) \n---------\n\n"
