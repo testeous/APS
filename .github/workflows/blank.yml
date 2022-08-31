@@ -41,12 +41,16 @@ jobs:
             for sha in "${sha_arr[@]}"; do
               file_arr=$(git diff --name-only $sha)
               echo "point5"
+              echo -e "List of changed files: $(git diff --name-only $sha) \n---------\n\n"
+              
               for file in "${file_arr[@]}"; do
                 echo "point6"
                 if [ -e $file ]
                 then
+                  echo "point 7"
                   echo "File $file in $branch branch will be update"
                 else
+                  echo "point 8"
                   echo "File $file not found in $branch branch"
                 fi
               done
