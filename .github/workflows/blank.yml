@@ -24,9 +24,6 @@ jobs:
           #branch_arr=("ПИН")
           echo "point1"
           curr_sha=$(echo ${{ github.event.before }} | cut -c1-6)
-          echo "point1.5"
-          echo $curr_sha
-          echo "point1.75"
           git log --pretty=format:"%h" | cut -c1-6 | sed '/'"$curr_sha"'/,$d' > tmp
           echo -e "current sha result: $curr_sha \n ------------"
           echo "tmp result: "
@@ -44,7 +41,7 @@ jobs:
             for sha in "${sha_arr[@]}"; do
               file_arr=(git diff --name-only $sha)
               echo "point5"
-              for file in "${file arr[@]}"; do
+              for file in "${file_arr[@]}"; do
                 echo "point6"
                 if [ -e $file ]
                 then
