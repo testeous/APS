@@ -40,7 +40,6 @@ jobs:
             echo "point4"
             for sha in "${sha_arr[@]}"; do
               echo "/////Current SHA: $sha/////"
-              git checkout $sha 
               file_arr=$(git diff --name-only $sha)
               echo "point5"
               echo -e "List of changed files: $(git diff --name-only $sha) \n---------\n\n"
