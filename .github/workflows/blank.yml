@@ -23,7 +23,7 @@ jobs:
           branch_arr=("ПИН" "ИВТ" "КТ" "ИКТ" "ПМ" "РТ")
           #branch_arr=("ПИН")
           echo "point1"
-          curr_sha=${{ github.event.before }} | cut -c1-6
+          echo ${{ github.event.before }} | cut -c1-6 | read  curr_sha
           git log --pretty=format:"%h" | cut -c1-6 | sed '/'"$curr_sha"'/,$d' > tmp
           echo -e "current sha result: $curr_sha \n ------------"
           echo "tmp result: "
