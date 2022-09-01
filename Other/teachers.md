@@ -8,7 +8,7 @@
 
 <!---### Беклемишев Дмитрий Николаевич
 
-<img src="pic/beklemishev.jpg"  />
+<img src="../.github/pic/teachers/beklemishev.jpg"  />
 
 Старший преподаватель Института МПСУ, инженер-электроник в НИИ ВСиСУ, руководитель группы
 
@@ -22,7 +22,7 @@
 
 ### Попов Михаил Геннадиевич
 
-<img src="pic/popov.jpg"  />
+<img src="../.github/pic/teachers/popov.jpg"  />
 
 Старший преподаватель Института МПСУ
 
@@ -38,7 +38,7 @@
 
 ### Примаков Евгений Владимирович
 
-<img src="pic/primakov.jpg"  />
+<img src="../.github/pic/teachers/primakov.jpg"  />
 
 Ассистент Института МПСУ, инженер-электроник в НИИ ВСиСУ
 
@@ -52,7 +52,7 @@
 -->
 ### Силантьев Александр Михайлович
 
-<img src="pic/silantiev.jpg"  />
+<img src="../.github/pic/teachers/silantiev.jpg"  />
 
 Старший преподаватель Института МПСУ, инженер-электроник в НИИ ВСиСУ, руководитель группы
 
@@ -66,7 +66,7 @@
 
 ### Хисамов Василь Тагирович
 
-<img src="pic/hisamov.jpg"  />
+<img src="../.github/pic/teachers/hisamov.jpg"  />
 
 Старший преподаватель Института МПСУ, инженер-электроник в НИИ ВСиСУ
 
@@ -81,7 +81,7 @@
 
 ### Солодовников Андрей Павлович
 
-<img src="pic/solodovnikov.jpg"  />
+<img src="../.github/pic/teachers/solodovnikov.jpg"  />
 
 Аспирант НИУ МИЭТ, инженер-электроник в НИИ ВСиСУ
 
@@ -95,7 +95,7 @@
 
 <!---### Анисимова Мария Александровна
 
-<img src="pic/anisimovam.jpg"  />
+<img src="../.github/pic/teachers/anisimovam.jpg"  />
 
 Магистрант НИУ МИЭТ, инженер-электроник в НИИ ВСиСУ
 
@@ -107,7 +107,7 @@
 
 ### Анисимова Наталья Александровна
 
-<img src="pic/anisimovan.jpg"  />
+<img src="../.github/pic/teachers/anisimovan.jpg"  />
 
 Магистрант НИУ МИЭТ, инженер-электроник в НИИ ВСиСУ
 
@@ -119,7 +119,7 @@
 -->
 ### Барков Евгений Сергеевич
 
-<img src="pic/barkov.jpg"  />
+<img src="../.github/pic/teachers/barkov.jpg"  />
 
 Магистрант НИУ МИЭТ, инженер-электроник в НИИ ВСиСУ
 
@@ -131,7 +131,7 @@
 
 <!---### Подусено Виктор Анатольевич
 
-![](pic/podusenko.jpg)
+![](../.github/pic/teachers/podusenko.jpg)
 
 Магистрант НИУ МИЭТ, Инженер-программист в АО НПЦ ЭЛВИС
 
@@ -143,7 +143,7 @@
 -->
 ### Рыжкова Дарья Васильевна
 
-<img src="pic/rygkova.jpg"  />
+<img src="../.github/pic/teachers/rygkova.jpg"  />
 
 Магистрант НИУ МИЭТ, инженер-электроник в НИИ ВСиСУ
 
@@ -154,7 +154,7 @@
 
 <!---### Терновой Николай Эдуардович
 
-<img src="pic/ternovoi.jpg"  />
+<img src="../.github/pic/teachers/ternovoi.jpg"  />
 
 Аспирант НИУ МИЭТ, Инженер отдела верификации и прототипирования конечных устройств в КМ211
 
@@ -168,7 +168,7 @@
 
 ### Орлов Александр Николаевич
 
-<img src="pic/primakov.jpg" />
+<img src="../.github/pic/teachers/primakov.jpg" />
 
 Старший преподаватель, инженер-электроник в НИИ ВСиСУ
 
