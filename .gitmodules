@@ -1,0 +1,3 @@
+[submodule "APS-labs-presentations"]
+	path = APS-labs-presentations
+	url = git@github.com:MPSU/APS-labs-presentations.git
