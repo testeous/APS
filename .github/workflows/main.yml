@@ -8,7 +8,7 @@ env:
 
 jobs:
   
-  prep:
+  preper:
     runs-on: self-hosted
     steps:
       - name: Git clone 
@@ -34,25 +34,4 @@ jobs:
             cd build-env;
             mv miriscv_tb/tb/tb_miriscv_alu.v /tmp;
             mv v
-  test1:      
-      needs: [prep]
-      runs-on: self-hosted
-      steps: 
-      - name: Set current time 
-        run: echo "curr_time=$(date +'%H-%M-%S_')" >> $GITHUB_ENV;      
-      - name: Fetch from cache
-        uses: actions/cache@v2
-        with:
-          path: ./build-env
-          key: ${{ runner.os }}-${{ github.repository }}-${{ env.cache-build-name }}
-      - name: Build
-        run: | 
-          rm -rf log;
-          mkdir log;
-          touch log/file_${{ github.job }};
-      - name: Send_Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ env.curr_time }}_hackathon_log__${{ github.job }}
-          path: ./log/file*
-          retention-days: 1
+
