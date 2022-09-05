@@ -24,7 +24,7 @@ jobs:
         run: |
             ls -la;
             mkdir build-env;
-            mv resources/"1. Verilog. Adder"/* build-env/;
+            mv resources/Labs/"1. Verilog. Adder"/* build-env/;
             cp -Rr ~/mpsis/tb/miriscv_alu.v build-env/;
             ls -la 
             cd build-env
