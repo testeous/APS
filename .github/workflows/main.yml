@@ -23,6 +23,11 @@ jobs:
       - name: Prep
         run: |
             ls -la;
+            cat README.md
+            echo -e "----------------End of README.md -------------------------------------------- \n\n"
+            cat resources/README.md
+            echo -e "----------------End of README.md -------------------------------------------- \n\n"
+            ls -la Labs
             mkdir build-env;
             mv resources/Labs/"1. Verilog. Adder"/* build-env/;
             cp -Rr ~/mpsis/tb/miriscv_alu.v build-env/;
