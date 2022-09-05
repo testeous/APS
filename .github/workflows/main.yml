@@ -29,7 +29,7 @@ jobs:
             #echo -e "----------------End of README.md -------------------------------------------- \n\n"
             ls -la Labs
             mkdir build-env;
-            mv resources/Labs/"1.Verilog. Adder"/* build-env/;
+            mv resources/Labs/"1.Verilog.Adder"/* build-env/;
             cp -Rr ~/mpsis/tb/miriscv_alu.v build-env/;
             ls -la 
             cd build-env
