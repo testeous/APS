@@ -23,13 +23,13 @@ jobs:
       - name: Prep
         run: |
             echo -e "----------Start of diff-------------------"
-            diff -qr Labs/ resources/Labs
+            diff -qr .github/workflows/main.yml resources/.github/workflows/main.yml
             echo -e "----------End of diff-------------------"
             ls -la;
-            #cat README.md
-            #echo -e "----------------End of README.md -------------------------------------------- \n\n"
-            #cat resources/README.md
-            #echo -e "----------------End of README.md -------------------------------------------- \n\n"
+            cat .github/workflows/main.yml
+            echo -e "----------------End of README.md -------------------------------------------- \n\n"
+            cat resources/.github/workflows/main.yml
+            echo -e "----------------End of README.md -------------------------------------------- \n\n"
             ls -la Labs
             mkdir build-env;
             mv resources/Labs/"1.Verilog.Adder"/* build-env/;
