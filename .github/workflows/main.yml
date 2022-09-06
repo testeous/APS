@@ -12,17 +12,18 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Git clone 
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Checkout tools repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: resources
       - name: Prep
         run: |
             echo -e "----------Start of diff-------------------"
+            diff -qr Labs/ resources/Labs/
             diff -qr .github/workflows/main.yml resources/.github/workflows/main.yml
             echo -e "----------End of diff-------------------"
             ls -la;
@@ -34,7 +35,7 @@ jobs:
             mkdir build-env;
             mv resources/Labs/"1.Verilog.Adder"/* build-env/;
             cp -Rr ~/mpsis/miriscv_tb/tb/tb_miriscv_alu.v build-env/;
-            ls -la 
+            ls -la resources/
             cd build-env
             ls -la
       - name: Build
