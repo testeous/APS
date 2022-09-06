@@ -21,6 +21,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           path: resources
       - name: Prep
+        continue-on-error: true
         run: |
             echo -e "----------Start of diff-------------------"
             diff -qr Labs/ resources/Labs/
@@ -41,7 +42,7 @@ jobs:
       - name: Build
         run: |
             cd build-env;
-            mv miriscv_tb/tb/tb_miriscv_alu.v /tmp;
+            #mv miriscv_tb/tb/tb_miriscv_alu.v /tmp;
 
  # test1:      
  #     needs: [prep]
