@@ -24,8 +24,8 @@ jobs:
         continue-on-error: true
         run: |
             echo -e "----------Start of diff-------------------"
-            diff -qr Labs/ resources/Labs/
-            diff -qr .github/workflows/main.yml resources/.github/workflows/main.yml
+            diff -qr Labs/ resources/Labs/ || true
+            diff -qr .github/workflows/main.yml resources/.github/workflows/main.yml || true
             echo -e "----------End of diff-------------------"
             ls -la;
             cat .github/workflows/main.yml
