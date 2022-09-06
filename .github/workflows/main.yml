@@ -22,6 +22,7 @@ jobs:
           path: resources
       - name: Prep
         run: |
+            git diff Labs/ resources/Labs
             ls -la;
             #cat README.md
             #echo -e "----------------End of README.md -------------------------------------------- \n\n"
@@ -38,7 +39,7 @@ jobs:
         run: |
             cd build-env;
             mv miriscv_tb/tb/tb_miriscv_alu.v /tmp;
-            mv v
+
  # test1:      
  #     needs: [prep]
  #     runs-on: self-hosted
