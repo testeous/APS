@@ -22,7 +22,9 @@ jobs:
           path: resources
       - name: Prep
         run: |
-            git diff Labs/ resources/Labs
+            echo -e "----------Start of diff-------------------"
+            diff -qr Labs/ resources/Labs
+            echo -e "----------End of diff-------------------"
             ls -la;
             #cat README.md
             #echo -e "----------------End of README.md -------------------------------------------- \n\n"
