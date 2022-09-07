@@ -27,26 +27,26 @@ jobs:
         run: |
             echo -e "Dict Init------------\n"
             declare -A space_cringe
-            acronyms[1.]="1.Verilog.Adder"
-            acronyms[2.]="2. Arithmetic-logic unit"
-            acronyms[3.]="3. Register file and memory"
-            acronyms[4.]="4. Primitive programmable device"
-            acronyms[5.]="5. Main decoder"
-            acronyms[6.]="6. Datapath"
-            acronyms[7.]="7. Peripheral units"
-            acronyms[8.]="8. Programming"
+            space_cringe[1.]="1.Verilog.Adder"
+            space_cringe[2.]="2. Arithmetic-logic unit"
+            space_cringe[3.]="3. Register file and memory"
+            space_cringe[4.]="4. Primitive programmable device"
+            space_cringe[5.]="5. Main decoder"
+            space_cringe[6.]="6. Datapath"
+            space_cringe[7.]="7. Peripheral units"
+            space_cringe[8.]="8. Programming"
             
             declare -A tb_dict
-            #acronyms["1.Verilog.Adder"]=tb_miriscv_adder.v
-            acronyms["2. Arithmetic-logic unit"]=tb_miriscv_alu.v
-            acronyms["3. Register file and memory"]=tb_miriscv_register_file.v
-            #acronyms["4. Primitive programmable device"]=tb_miriscv_dp.v
-            acronyms["5. Main decoder"]=tb_miriscv_decode.v
-            acronyms["6. Datapath"]=tb_miriscv_lsu.v
-            acronyms["7. Peripheral units"]=tb_miriscv_core.sv
-            #acronyms[]=tb_miriscv_cu.v
-            #acronyms[]=tb_miriscv_sp_ram.sv
-            #acronyms[]=tb_miriscv_top.sv
+            #tb_dict["1.Verilog.Adder"]=tb_miriscv_adder.v
+            tb_dict["2. Arithmetic-logic unit"]=tb_miriscv_alu.v
+            tb_dict["3. Register file and memory"]=tb_miriscv_register_file.v
+            #tb_dict["4. Primitive programmable device"]=tb_miriscv_dp.v
+            tb_dict["5. Main decoder"]=tb_miriscv_decode.v
+            tb_dict["6. Datapath"]=tb_miriscv_lsu.v
+            tb_dict["7. Peripheral units"]=tb_miriscv_core.sv
+            #tb_dict[]=tb_miriscv_cu.v
+            #tb_dict[]=tb_miriscv_sp_ram.sv
+            #tb_dict[]=tb_miriscv_top.sv
             echo ${space_cringe[$ch_lab]}
             echo -e "End of dict init--------------------------"
             
