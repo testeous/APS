@@ -20,11 +20,59 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: resources
-      - name: Prep
-        continue-on-error: true
+      - name: Dict_prep
         run: |
+
+      - name: Prep
+        run: |
+            echo -e "Dict Init------------\n"
+            declare -A space_cringe
+            acronyms[1.]="1.Verilog.Adder"
+            acronyms[2.]="2. Arithmetic-logic unit"
+            acronyms[3.]="3. Register file and memory"
+            acronyms[4.]="4. Primitive programmable device"
+            acronyms[5.]="5. Main decoder"
+            acronyms[6.]="6. Datapath"
+            acronyms[7.]="7. Peripheral units"
+            acronyms[8.]="8. Programming"
+            
+            declare -A tb_dict
+            #acronyms["1.Verilog.Adder"]=tb_miriscv_adder.v
+            acronyms["2. Arithmetic-logic unit"]=tb_miriscv_alu.v
+            acronyms["3. Register file and memory"]=tb_miriscv_register_file.v
+            #acronyms["4. Primitive programmable device"]=tb_miriscv_dp.v
+            acronyms["5. Main decoder"]=tb_miriscv_decode.v
+            acronyms["6. Datapath"]=tb_miriscv_lsu.v
+            acronyms["7. Peripheral units"]=tb_miriscv_core.sv
+            #acronyms[]=tb_miriscv_cu.v
+            #acronyms[]=tb_miriscv_sp_ram.sv
+            #acronyms[]=tb_miriscv_top.sv
+            echo ${space_cringe[$ch_lab]}
+            echo -e "End of dict init--------------------------"
+            
             echo -e "----------Start of diff-------------------"
-            diff -qr Labs/ resources/Labs/ || true
+            #diff -qr Labs/ resources/Labs/ || true
+            
+            diff -qr resources/Labs/ Labs/ | grep -E "Labs.*differ" | cut -d ' ' -f 2 | sort | uniq > tmp
+            line_numb=$(cat tmp | wc -l)
+            echo  "Number of uniq lines: $line_numb"
+            if [[ $line_numb -eq 1 ]]; then
+                    lab_numb=$(cat tmp | cut -d '/' -f 3 | cut -d '.' -f 1)
+                    ch_lab=$(diff -qr resources/Labs/ Labs/ | grep -E "Labs.*differ" | cut -d ' ' -f 2 | cut -d '/' -f 3)
+                    echo "Start checking with lab №$lab_numb...."
+                    echo "ch_lab: |$ch_lab|"
+                    mv resources/Labs/${space_cringe[$ch_lab]}/* build-env/;
+                    cp -Rr ~/mpsis/miriscv_tb/tb/${tb_dict[${space_cringe[$ch_lab]}]} build-env/;
+            elif [[ $line_numb -eq 0 ]]; then
+                    echo "Changed lab not founds"
+                    exit 1
+            else
+                    echo "One lab change = one pull request. Change found in two labs or more labs"
+                    exit 1
+            fi
+
+            
+            
             diff -qr .github/workflows/main.yml resources/.github/workflows/main.yml || true
             echo -e "----------End of diff-------------------"
             ls -la;
