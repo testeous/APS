@@ -47,7 +47,8 @@ jobs:
             #tb_dict[]=tb_miriscv_cu.v
             #tb_dict[]=tb_miriscv_sp_ram.sv
             #tb_dict[]=tb_miriscv_top.sv
-            echo ${space_cringe[$ch_lab]}
+            echo "Dict all done"
+            echo ${space_cringe[1.]}
             echo -e "End of dict init--------------------------"
             
             echo -e "----------Start of diff-------------------"
