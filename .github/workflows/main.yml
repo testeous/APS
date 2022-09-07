@@ -63,7 +63,7 @@ jobs:
                     echo "Start checking with lab №$lab_numb...."
                     echo "ch_lab: |$ch_lab|"
                     mkdir build-env;
-                    mv resources/Labs/${space_cringe[$ch_lab]}/* build-env/;
+                    mv "resources/Labs/${space_cringe[$ch_lab]}/*" "build-env/";
                     cp -Rr ~/mpsis/miriscv_tb/tb/${tb_dict[${space_cringe[$ch_lab]}]} build-env/;
             elif [[ $line_numb -eq 0 ]]; then
                     echo "Changed lab not founds"
